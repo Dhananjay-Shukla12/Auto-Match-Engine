@@ -1,0 +1,15 @@
+# Secrets and Auth
+auth.json
+state.json
+.env
+
+# Python Environment
+venv/
+venv1/
+__pycache__/
+*.pyc
+
+# Playwright specific
+test-results/
+playwright-report/
+blob-report/
