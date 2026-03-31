@@ -20,6 +20,7 @@ def run(playwright: Playwright) -> None:
     # Find all job cards and print the titles
     page.wait_for_selector(".fd37a291", timeout=10000)
     titles = page.locator(".fd37a291").all_text_contents()
+    page.screenshot(path="screenshot.png")
     if len(titles) > 0:
         print(f"✅ Success! Found {len(titles)} jobs:")
     for t in titles:
