@@ -1,5 +1,6 @@
 # Secrets and Auth
 auth.json
+naukri.json
 state.json
 .env
 
@@ -13,3 +14,4 @@ __pycache__/
 test-results/
 playwright-report/
 blob-report/
+test_sample_linkdin.py
