@@ -1,4 +1,4 @@
-# Auto Match Engine 🦅
+# Auto Match Engine 
 
 I built the Auto Match Engine over a weekend because manually scrolling through job boards and trying to guess if I actually qualify for a role is exhausting.
 
