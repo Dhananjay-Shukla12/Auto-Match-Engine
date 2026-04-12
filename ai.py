@@ -7,7 +7,7 @@ def analyze_jobs(jobs_data):
     client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
     prompt = f"""
-    I am a beginner aiming for AI Engineer role with three years of experience in TOSCA testing.
+    Your text
 
     Jobs:
     {jobs_data}
