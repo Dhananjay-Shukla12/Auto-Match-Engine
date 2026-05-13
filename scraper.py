@@ -1,7 +1,7 @@
 import re
 from playwright.sync_api import Playwright, sync_playwright, expect # type: ignore
 
-def all_data():
+def all_data(search_query: str):
     jobs_data = []
     def run(playwright: Playwright) -> None:
         browser = playwright.chromium.launch(headless=False)
@@ -11,7 +11,7 @@ def all_data():
         page.goto("https://www.naukri.com/mnjuser/homepage")
         page.wait_for_timeout(3000)
         page.get_by_text("Search jobs here").click()
-        page.get_by_role("textbox", name="Enter keyword / designation").fill("AI")
+        page.get_by_role("textbox", name="Enter keyword / designation").fill(search_query)
         page.get_by_role("textbox", name="Select experience").click()
         page.locator("div").filter(has_text=re.compile(r"^3 years$")).click()
         page.get_by_role("button", name=" Search").click()

@@ -3,11 +3,12 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-def analyze_jobs(jobs_data):
+def analyze_jobs(jobs_data,role, years, current_role, skills):
     client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
     prompt = f"""
-    I am a beginner aiming for AI Engineer role with three years of experience in TOSCA testing.
+    I am aiming for {role} role with {years} of experience {current_role}.These are the skills I have
+    {skills}
 
     Jobs:
     {jobs_data}
